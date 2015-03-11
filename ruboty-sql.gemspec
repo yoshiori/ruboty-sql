@@ -1,4 +1,3 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ruboty/sql/version'
@@ -7,10 +6,9 @@ Gem::Specification.new do |spec|
   spec.name          = "ruboty-sql"
   spec.version       = Ruboty::Sql::VERSION
   spec.authors       = ["Yoshiori SHOJI"]
-  spec.email         = ["yoshiori@cookpad.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.email         = ["yoshiori@gmail.com"]
+  spec.summary       = "Sql handler for Ruboty"
+  spec.homepage      = "https://github.com/yoshiori/ruboty-sql"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,6 +17,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "ruboty"
+  spec.add_dependency "activerecord"
+  spec.add_dependency "hirb"
+  spec.add_dependency "hirb-unicode"
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
