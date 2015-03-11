@@ -1,7 +1,8 @@
 # Ruboty::Sql
 
-ruboty handler.
-run sql
+Sql handler for Ruboty.
+
+![](slack.png)
 
 ## Installation
 
@@ -33,9 +34,12 @@ And then execute:
 
 ## ENV
 like rails's database.yml.
+
+
 add prefix `RUBOTY_SQL_`
 
 adapter => RUBOTY_SQL_ADAPTER
+
 username => RUBOTY_SQL_USERNAME
 
 ### security (strongly recommended)
