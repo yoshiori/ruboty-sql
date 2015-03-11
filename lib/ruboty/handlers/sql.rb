@@ -18,7 +18,8 @@ module Ruboty
       def run_sql(message)
         sql = message[:sql]
         result = ActiveRecord::Base.connection.select_all(sql)
-        message.reply(Hirb::Helpers::AutoTable.render(result), code: true)
+
+        message.reply(Hirb::Helpers::AutoTable.render(result[0...20]), code: true)
       rescue => e
         message.reply(e)
       end
